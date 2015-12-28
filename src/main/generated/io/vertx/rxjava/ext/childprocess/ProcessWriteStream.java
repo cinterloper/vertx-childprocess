@@ -42,6 +42,14 @@ public class ProcessWriteStream implements WriteStream<Buffer> {
     return delegate;
   }
 
+  public void end() { 
+    this.delegate.end();
+  }
+
+  public void end(Buffer t) { 
+    this.delegate.end((io.vertx.core.buffer.Buffer) t.getDelegate());
+  }
+
   public boolean writeQueueFull() { 
     boolean ret = this.delegate.writeQueueFull();
     return ret;

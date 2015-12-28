@@ -85,6 +85,16 @@ public class ChildProcessImpl implements NuProcessHandler, ChildProcess, Process
   }
 
   @Override
+  public void end() {
+
+  }
+
+  @Override
+  public void end(Buffer buffer) {
+
+  }
+
+  @Override
   public synchronized ProcessWriteStream setWriteQueueMaxSize(int i) {
     stdinMaxSize = i;
     return this;
